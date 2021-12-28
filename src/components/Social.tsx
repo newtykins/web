@@ -32,7 +32,7 @@ function Social({ iconSize }: SocialProps) {
     };
 
     return (
-        <ul className="inline space-x-8">
+        <ul className="inline space-x-4 lg:space-x-8 w-max">
             <a
                 href="https://github.com/newtykins"
                 className="hover:text-silver"

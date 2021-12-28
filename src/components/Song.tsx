@@ -7,7 +7,7 @@ function Social() {
     const [url, setUrl] = useState<string>();
 
     const handleTypewriter = (typewriter: TypewriterClass) => {
-        axios.get(`${window.location.origin}/api/spotify`).then(({ data }) => {
+        axios.get(`https://newtt.me/api/spotify`).then(({ data }) => {
             if (!data.message) {
                 typewriter
                     .changeDelay(50)
@@ -27,7 +27,7 @@ function Social() {
     return (
         <a
             href={url}
-            className="text-silver text-3xl font-bold hover:underline"
+            className="text-silver lg:text-3xl md:text-2xl text-xl font-bold hover:underline"
         >
             <Typewriter
                 onInit={handleTypewriter}
