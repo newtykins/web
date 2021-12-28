@@ -13,7 +13,7 @@ function Social({ breakpoint }: SongProps) {
     const [url, setUrl] = useState<string>();
 
     const handleTypewriter = (typewriter: TypewriterClass) => {
-        axios.get(`https://newtt.me/api/spotify`).then(({ data }) => {
+        axios.get(`${window.location.origin}/api/spotify`).then(({ data }) => {
             if (!data.message) {
                 let artists: string = data.artists[0].name.toLowerCase();
                 let song: string = data.name.toLowerCase();
