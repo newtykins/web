@@ -23,7 +23,7 @@ function App({}: AppProps) {
                 NET({
                     el: 'body',
                     mouseControls: true,
-                    touchControls: false,
+                    touchControls: true,
                     gyroControls: false,
                     minHeight: height,
                     minWidth: width,

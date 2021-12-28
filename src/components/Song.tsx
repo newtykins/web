@@ -25,9 +25,10 @@ function Social({ breakpoint }: SongProps) {
                         song = truncate(song, { length: 40 - artists.length });
                         break;
                     case Breakpoints.Medium:
-                        song = truncate(song, { length: 70 - artists.length });
+                        song = truncate(song, { length: 50 - artists.length });
                         break;
                     case Breakpoints.Large:
+                        song = truncate(song, { length: 50 - artists.length });
                         artists = data.artists
                             .map((a: any) => a.name)
                             .join(', ')
