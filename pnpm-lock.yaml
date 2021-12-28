@@ -9,6 +9,7 @@ specifiers:
   '@snowpack/plugin-react-refresh': ^2.5.0
   '@snowpack/plugin-typescript': ^1.2.1
   '@types/humanize-duration': ^3.27.0
+  '@types/lodash.truncate': ^4.4.6
   '@types/react': ^17.0.4
   '@types/react-dom': ^17.0.3
   '@types/react-helmet': ^6.1.4
@@ -21,6 +22,7 @@ specifiers:
   humanize-duration: ^3.27.0
   i18n-iso-countries: ^7.0.0
   iso-language-converter: ^1.1.0
+  lodash.truncate: ^4.4.2
   postcss: ^8.3.11
   prettier: ^2.2.1
   prop-types: ^15.7.2
@@ -46,6 +48,7 @@ dependencies:
   humanize-duration: 3.27.0
   i18n-iso-countries: 7.0.0
   iso-language-converter: 1.1.0
+  lodash.truncate: 4.4.2
   prop-types: 15.7.2
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
@@ -63,6 +66,7 @@ devDependencies:
   '@snowpack/plugin-react-refresh': 2.5.0_react-dom@17.0.2+react@17.0.2
   '@snowpack/plugin-typescript': 1.2.1_typescript@4.4.4
   '@types/humanize-duration': 3.27.0
+  '@types/lodash.truncate': 4.4.6
   '@types/react': 17.0.34
   '@types/react-dom': 17.0.11
   '@types/react-helmet': 6.1.4
@@ -673,6 +677,16 @@ packages:
     resolution: {integrity: sha512-FXCJgyyN3ivVgRoml4h94G/p3kY+u/B86La+QptcqJaWtBWtmc6TtkNfS40n9bIvyLteHh7zXOtgbobORKPbDg==}
     dependencies:
       '@types/node': 16.11.7
+    dev: true
+
+  /@types/lodash.truncate/4.4.6:
+    resolution: {integrity: sha512-PTZoD9mSRANSAHnb89AmoIiuthTPGfehBIo4ojd8U8CFc3aac89IVaaIRQNJbglY8SOJoOZEEVE3nNND3uRoyg==}
+    dependencies:
+      '@types/lodash': 4.14.178
+    dev: true
+
+  /@types/lodash/4.14.178:
+    resolution: {integrity: sha512-0d5Wd09ItQWH1qFbEyQ7oTQ3GZrMfth5JkbN3EvTKLXcHLRDSXeLnlvlOn0wvxVIwK5o2M8JzP/OWz7T3NRsbw==}
     dev: true
 
   /@types/node/16.11.7:
@@ -2581,6 +2595,10 @@ packages:
   /lodash.topath/4.5.2:
     resolution: {integrity: sha1-NhY1Hzu6YZlKCTGYlmC9AyVP0Ak=}
     dev: true
+
+  /lodash.truncate/4.4.2:
+    resolution: {integrity: sha1-WjUNoLERO4N+z//VgSy+WNbq4ZM=}
+    dev: false
 
   /lodash/4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}

@@ -4,6 +4,12 @@ import ReactGA from 'react-ga';
 import App from './App';
 import './index.css';
 
+export enum Breakpoints {
+    Small,
+    Medium,
+    Large,
+}
+
 ReactGA.initialize('G-X2HWB0MHZ2');
 ReactGA.pageview(window.location.pathname + window.location.search);
 
