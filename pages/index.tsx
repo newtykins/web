@@ -1,17 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import type { NextPage } from 'next';
+import { createRef, useEffect, useState } from 'react';
 import * as THREE from 'three';
 import NET from 'vanta/dist/vanta.net.min.js';
 import Typewriter, { TypewriterClass } from 'typewriter-effect';
-import Helmet from 'react-helmet';
-import Social from './components/Social';
-import Song from './components/Song';
+import Social from '~components/Social';
+import Song from '~components/Song';
 import Favicon from 'react-favicon';
-import { Breakpoints } from './index';
+import Head from 'next/head';
+import Script from 'next/script';
 
-interface AppProps {}
+export enum Breakpoints {
+    Small,
+    Medium,
+    Large,
+}
 
-function App({}: AppProps) {
-    const [vantaEffect, setVantaEffect]: any = useState(0);
+const Home: NextPage = () => {
+    const vantaRef = createRef<HTMLElement>();
+    let vantaEffect: any;
     const [breakpoint, setBreakpoint] = useState<Breakpoints>();
 
     useEffect(() => {
@@ -19,30 +25,29 @@ function App({}: AppProps) {
         if (!vantaEffect) {
             const { innerHeight: height, innerWidth: width } = window;
 
-            setVantaEffect(
-                NET({
-                    el: 'body',
-                    mouseControls: true,
-                    touchControls: true,
-                    gyroControls: false,
-                    minHeight: height,
-                    minWidth: width,
-                    backgroundColor: 0x0f0f10,
-                    color: 0xffffff,
-                    showDots: false,
-                    points: 3,
-                    THREE,
-                }),
-            );
+            // eslint-disable-next-line
+            vantaEffect = NET({
+                el: vantaRef.current,
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: height,
+                minWidth: width,
+                backgroundColor: 0x0f0f10,
+                color: 0xffffff,
+                showDots: false,
+                points: 3,
+                THREE,
+            });
         }
 
         return () => {
             if (vantaEffect) vantaEffect.destroy();
         };
-    }, [vantaEffect]);
+    }, [vantaEffect, vantaRef]);
 
-    // Detect the breakpoint
     useEffect(() => {
+        // Detect the breakpoint
         const { innerWidth: width } = window;
 
         if (width >= 1024) {
@@ -52,13 +57,15 @@ function App({}: AppProps) {
         } else {
             setBreakpoint(Breakpoints.Small);
         }
-    }, []);
+
+        // Handle resizing of the window
+        window.addEventListener('resize', () => {
+            if (vantaEffect) vantaEffect.resize();
+        });
+    }, [vantaEffect]);
 
     // todo: animate exclamation marks in title
-
-    const handleTypewriter = (typewriter: TypewriterClass) => {
-        typewriter.typeString('newtykins').start();
-    };
+    // todo: lightmode toggle
 
     const frames = Array.from(
         Array(9),
@@ -66,16 +73,21 @@ function App({}: AppProps) {
     );
 
     return (
-        <main>
-            <Helmet>
+        <main ref={vantaRef}>
+            <Head>
                 <title>newt!!</title>
-            </Helmet>
+            </Head>
+
             <Favicon url={frames} animated={true} animationDelay={75} />
 
             <div className="lg:p-40 md:p-28 p-16 md:pt-64">
                 <div className="name flex flex-col w-full z-1">
                     <span className="text-silver lg:text-8xl md:text-7xl text-4xl font-extrabold pb-10">
-                        <Typewriter onInit={handleTypewriter} />
+                        <Typewriter
+                            onInit={(typewriter) =>
+                                typewriter.typeString('newtykins').start()
+                            }
+                        />
                     </span>
 
                     <Song breakpoint={breakpoint as Breakpoints} />
@@ -94,8 +106,10 @@ function App({}: AppProps) {
                     />
                 </footer>
             </div>
+
+            <Script src="/noZoom.js"></Script>
         </main>
     );
-}
+};
 
-export default App;
+export default Home;

@@ -6,3 +6,5 @@ export const humanise = (ms: number) => {
         conjunction: ' and ',
     });
 };
+
+export default humanise;

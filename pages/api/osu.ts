@@ -1,8 +1,8 @@
 import axios from 'axios';
 import countries from 'i18n-iso-countries';
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import config from '../apiHelpers/config';
-import { humanise } from '../apiHelpers/utils';
+import config from '~utils/config';
+import humanise from '~utils/humanise';
 
 type OsuQueryType = 'id' | 'username';
 

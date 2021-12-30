@@ -1,7 +1,7 @@
 import axios from 'axios';
 import languages from 'iso-language-converter';
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import config from '../apiHelpers/config';
+import config from '~utils/config';
 
 const getAccessToken = async (): Promise<string> => {
     const { data } = await axios.post(

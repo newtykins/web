@@ -2,14 +2,14 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import Typewriter, { TypewriterClass } from 'typewriter-effect';
 import truncate from 'lodash.truncate';
-import { Breakpoints } from '../index';
+import { Breakpoints } from '~pages/index';
 
 interface SongProps {
     breakpoint: Breakpoints;
 }
 
 // todo: add typewriter effect when changing songs
-function Social({ breakpoint }: SongProps) {
+function Song({ breakpoint }: SongProps) {
     const [url, setUrl] = useState<string>();
 
     const handleTypewriter = (typewriter: TypewriterClass) => {
@@ -58,4 +58,4 @@ function Social({ breakpoint }: SongProps) {
     );
 }
 
-export default Social;
+export default Song;

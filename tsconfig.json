@@ -1,27 +1,26 @@
 {
-	"include": ["src", "types", "api", "apiHelpers"],
-	"compilerOptions": {
-		"module": "esnext",
-		"target": "esnext",
-		"moduleResolution": "node",
-		"jsx": "preserve",
-		"baseUrl": "./",
-		/* paths - import rewriting/resolving */
-		"paths": {
-			// If you configured any Snowpack aliases, add them here.
-			// Add this line to get types for streaming imports (packageOptions.source="remote"):
-			//     "*": [".snowpack/types/*"]
-			// More info: https://www.snowpack.dev/guides/streaming-imports
-		},
-		/* noEmit - Snowpack builds (emits) files, not tsc. */
-		"noEmit": true,
-		/* Additional Options */
-		"strict": true,
-		"skipLibCheck": true,
-		"types": ["snowpack-env"],
-		"forceConsistentCasingInFileNames": true,
-		"resolveJsonModule": true,
-		"allowSyntheticDefaultImports": true,
-		"importsNotUsedAsValues": "error"
-	}
+    "compilerOptions": {
+        "target": "es5",
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "noEmit": true,
+        "esModuleInterop": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "jsx": "preserve",
+        "incremental": true,
+        "baseUrl": ".",
+        "paths": {
+            "~utils/*": ["utils/*"],
+            "~pages/*": ["pages/*"],
+            "~components/*": ["components/*"]
+        }
+    },
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "exclude": ["node_modules"]
 }

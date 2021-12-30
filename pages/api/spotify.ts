@@ -1,7 +1,7 @@
 import SpotifyWebApi from 'spotify-web-api-node';
-import config from '../apiHelpers/config';
+import config from '~utils/config';
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { humanise } from '../apiHelpers/utils';
+import humanise from '~utils/humanise';
 
 const spotify = new SpotifyWebApi({
     clientId: config.credentials.spotify.id,

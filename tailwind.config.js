@@ -1,9 +1,11 @@
-const colors = require('tailwindcss/colors');
 const colours = require('tailwindcss/colors');
 
 module.exports = {
 	mode: 'jit',
-	purge: ['./public/**/*.html', './src/**/*.{js,jsx,ts,tsx,vue}'],
+	purge: [
+		'./pages/**/*.{js,ts,jsx,tsx}',
+		'./components/**/*.{js,ts,jsx,tsx}',
+	],
 	theme: {
 		fontFamily: {
 			sans: ['Inter'],
@@ -12,7 +14,7 @@ module.exports = {
 			gray: colours.gray,
 			silver: '#d1c5ad',
 			white: colours.white,
-			purple: colors.violet,
+			purple: colours.violet,
 		},
 	},
 };

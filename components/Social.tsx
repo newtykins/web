@@ -21,7 +21,7 @@ function Social({ iconSize }: SocialProps) {
         if (!isLive) {
             checkIfLive();
         }
-    }, []);
+    }, [isLive]);
 
     const checkIfLive = async () => {
         const { data } = await axios.get(
