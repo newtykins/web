@@ -2,12 +2,11 @@ import type { NextPage } from 'next';
 import { createRef, useEffect, useState } from 'react';
 import * as THREE from 'three';
 import NET from 'vanta/dist/vanta.net.min.js';
-import Typewriter, { TypewriterClass } from 'typewriter-effect';
+import Typewriter from 'typewriter-effect';
 import Social from '~components/Social';
 import Song from '~components/Song';
 import Favicon from 'react-favicon';
 import Head from 'next/head';
-import Script from 'next/script';
 
 export enum Breakpoints {
     Small,
@@ -76,6 +75,7 @@ const Home: NextPage = () => {
         <main ref={vantaRef}>
             <Head>
                 <title>newt!!</title>
+                <script type="text/javascript" src="/noZoom.js" defer></script>
             </Head>
 
             <Favicon url={frames} animated={true} animationDelay={75} />
@@ -106,8 +106,6 @@ const Home: NextPage = () => {
                     />
                 </footer>
             </div>
-
-            <Script src="/noZoom.js"></Script>
         </main>
     );
 };
