@@ -46,21 +46,27 @@ const Home: NextPage = () => {
     }, [vantaEffect, vantaRef]);
 
     useEffect(() => {
-        // Detect the breakpoint
-        const { innerWidth: width } = window;
+        document.onreadystatechange = () => {
+            if (document.readyState === 'complete') {
+                // Detect the breakpoint
+                const { innerWidth: width } = window;
 
-        if (width >= 1024) {
-            setBreakpoint(Breakpoints.Large);
-        } else if (width >= 768) {
-            setBreakpoint(Breakpoints.Medium);
-        } else {
-            setBreakpoint(Breakpoints.Small);
-        }
+                if (width >= 1024) {
+                    setBreakpoint(Breakpoints.Large);
+                } else if (width >= 768) {
+                    setBreakpoint(Breakpoints.Medium);
+                } else {
+                    setBreakpoint(Breakpoints.Small);
+                }
 
-        // Handle resizing of the window
-        window.addEventListener('resize', () => {
-            if (vantaEffect) vantaEffect.resize();
-        });
+                // Handle resizing of the window
+                window.addEventListener('resize', () => {
+                    if (vantaEffect) vantaEffect.resize();
+                });
+
+                document.onreadystatechange = null;
+            }
+        };
     }, [vantaEffect]);
 
     // todo: animate exclamation marks in title
