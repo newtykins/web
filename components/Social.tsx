@@ -33,14 +33,11 @@ function Social({ iconSize }: SocialProps) {
 
     return (
         <ul className="inline space-x-4 lg:space-x-8 w-max">
-            <a
-                href="https://github.com/newtykins"
-                className="hover:text-silver"
-            >
+            <a href="https://git.newtt.me/" className="hover:text-silver">
                 <FontAwesomeIcon icon={faGithub} size={iconSize} />
             </a>
             <a
-                href="https://twitch.tv/newtykin"
+                href="https://twitch.newtt.me/"
                 className={
                     isLive
                         ? 'text-purple-500 hover:text-purple-400'
@@ -55,16 +52,10 @@ function Social({ iconSize }: SocialProps) {
             >
                 <FontAwesomeIcon icon={faDiscord} size={iconSize} />
             </a>
-            <a
-                href="https://open.spotify.com/user/31f5j3pn6dafanybum4r4fwsppea?si=19b454be5af44ae2"
-                className="hover:text-silver"
-            >
+            <a href="https://spotify.newtt.me/" className="hover:text-silver">
                 <FontAwesomeIcon icon={faSpotify} size={iconSize} />
             </a>
-            <a
-                href="https://steamcommunity.com/id/newtykins"
-                className="hover:text-silver"
-            >
+            <a href="https://steam.newtt.me/" className="hover:text-silver">
                 <FontAwesomeIcon icon={faSteam} size={iconSize} />
             </a>
         </ul>
