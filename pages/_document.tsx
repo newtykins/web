@@ -7,7 +7,7 @@ const Document: NextPage = () => {
             <Head>
                 <meta name="robots" content="all" />
                 <meta
-                    property="description"
+                    name="description"
                     content="Student programmer providing simplistic solutions to modern
         problems"
                 />

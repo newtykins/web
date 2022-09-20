@@ -22,6 +22,7 @@ const Footer: NextPage = () => {
                     icon={faHeart}
                     iconSize={1}
                     shouldResize={false}
+                    aria-label="Heart"
                 />
 
                 <SocialIcon
@@ -29,6 +30,7 @@ const Footer: NextPage = () => {
                     icon={faGithub}
                     iconSize={1}
                     shouldResize={false}
+                    aria-label="GitHub"
                 />
             </div>
         </footer>

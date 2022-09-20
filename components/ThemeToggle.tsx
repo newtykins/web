@@ -17,7 +17,7 @@ const ThemeToggle: NextPage = () => {
         );
 
     return (
-        <button className="mr-6 hover:cursor-pointer relative top-1" onClick={toggleTheme}>
+        <button className="mr-6 hover:cursor-pointer relative top-1" onClick={toggleTheme} aria-label={theme === 'light' ? 'Enable dark mode' : 'Enable light mode'}>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
