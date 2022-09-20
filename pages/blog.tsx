@@ -36,7 +36,7 @@ const Home: NextPage = () => {
                         </span>
                         <br />
                         <br />
-                        <Image src="/uhoh.png" width={250} height={250} className="rounded-3xl" />
+                        <Image src="/img/uhoh.png" width={250} height={250} className="rounded-3xl" />
                     </React.Fragment>
                 )
             ) : (
@@ -45,7 +45,7 @@ const Home: NextPage = () => {
                     <span className="subheading text-xl">Just loading... :D</span>
                     <br />
                     <br />
-                    <Image src="/WOAH.webp" width={250} height={250} className="rounded-3xl" />
+                    <Image src="/img/WOAH.webp" width={250} height={250} className="rounded-3xl" />
                 </React.Fragment>
             )}
         </React.Fragment>

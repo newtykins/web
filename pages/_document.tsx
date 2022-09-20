@@ -33,13 +33,6 @@ const Document: NextPage = () => {
                 <meta name="twitter:image" content="/thumb.png" />
                 <meta name="twitter:card" content="summary_large_image" />
 
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" />
-                <link
-                    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap"
-                    rel="stylesheet"
-                />
-
                 <link rel="manifest" href="/manifest.json" />
                 <meta name="theme-color" content="#AAF0D1" />
             </Head>

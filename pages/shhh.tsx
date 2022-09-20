@@ -11,7 +11,7 @@ const Shhh: NextPage = () => {
             <span className="subheading text-xl">Enjoy this video as a reward (:</span>
 
             <div className="flex justify-center mt-10">
-                <video src="./high five!!.mp4" autoPlay loop controls></video>
+                <video src="./video/high five!!.mp4" autoPlay loop controls></video>
             </div>
         </React.Fragment>
     );

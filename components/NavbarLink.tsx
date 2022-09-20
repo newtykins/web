@@ -20,8 +20,8 @@ const NavbarLink: NextPage<Props> = ({ path, content }) => {
         >
             <button
                 onClick={() => router.push(path)}
-                className={`font-bold ${
-                    !isActive ? 'hover:underline' : 'hover:underline md:hover:no-underline'
+                className={`font-bold tracking-wider ${
+                    !isActive ? 'hover:underline' : 'hover:underline md:hover:no-underline '
                 }`}
             >
                 {content}

@@ -127,7 +127,7 @@ const About: NextPage = () => {
                 </Card>
             </div>
 
-            <Image src="/jinx.webp" width={250} height={250} className="rounded-3xl" />
+            <Image src="/img/jinx.webp" width={250} height={250} className="rounded-3xl" />
         </React.Fragment>
     );
 };

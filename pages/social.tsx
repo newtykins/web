@@ -57,7 +57,7 @@ const Social: NextPage = () => {
                 />
             </div>
 
-            <Image src="/doubloons.png" width={250} height={250} className="rounded-3xl" />
+            <Image src="/img/doubloons.png" width={250} height={250} className="rounded-3xl" />
         </React.Fragment>
     );
 };

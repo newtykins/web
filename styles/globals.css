@@ -1,3 +1,13 @@
+@font-face {
+    font-family: "Quicksand";
+    src: url("../public/fonts/Quicksand-Medium.ttf")
+}
+
+@font-face {
+    font-family: "Roboto Mono";
+    src: url("../public/fonts/RobotoMono-Regular.ttf")
+}
+
 :root {
     --gradient: linear-gradient(90deg, #11998e 0%, #38ef7d);
 }

@@ -6,7 +6,8 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Roboto Mono', ...defaultTheme.fontFamily.sans]
+                sans: ['Roboto Mono', ...defaultTheme.fontFamily.sans],
+                quicksand: ['Quicksand']
             },
             colors: {
                 nord: {

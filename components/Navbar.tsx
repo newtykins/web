@@ -30,10 +30,10 @@ const Navbar: NextPage = () => {
 
     return (
         <header
-            className="flex items-center flex-wrap justify-between relative mb-20 select-none mt-5"
+            className="flex items-center flex-wrap justify-between relative mb-20 select-none mt-5 font-quicksand"
             id="nav"
         >
-            <button className="rainbow text-2xl mr-6 font-bold" onClick={() => router.push('/')}>
+            <button className="rainbow text-2xl mr-6 font-bold tracking-wider" onClick={() => router.push('/')}>
                 newt!
             </button>
 
