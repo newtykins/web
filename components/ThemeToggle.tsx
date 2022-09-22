@@ -25,7 +25,15 @@ const ThemeToggle: NextPage = () => {
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                fill={theme === 'light' ? 'black' : 'white'}
+                fill={
+                    theme === 'system'
+                        ? systemTheme === 'dark'
+                            ? 'white'
+                            : 'black'
+                        : theme === 'dark'
+                            ? 'white'
+                            : 'black'
+                    }
                 width={28}
                 height={28}
             >
