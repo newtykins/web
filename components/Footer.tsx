@@ -22,7 +22,6 @@ const Footer: NextPage = () => {
                     icon={faHeart}
                     iconSize={1}
                     shouldResize={false}
-                    aria-label="Heart"
                 />
 
                 <SocialIcon
