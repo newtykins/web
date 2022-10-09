@@ -69,16 +69,18 @@ const App: NextPage<AppProps> = ({ Component, pageProps }) => {
         )
             .then(res => res.json())
             .then(({ items: commits }: { items: any[] }) => {
-                const [recentCommit] = commits;
-                const [repoOwner, repoName] = recentCommit?.repository?.['full_name']?.split('/');
-                const { message } = recentCommit?.commit;
+                if (commits) {
+                    const [recentCommit] = commits;
+                    const [repoOwner, repoName] = recentCommit?.repository?.['full_name']?.split('/');
+                    const { message } = recentCommit?.commit;
 
-                setRecentCommit({
-                    repoOwner,
-                    repoName,
-                    url: `https://github.com/${repoOwner}/${repoName}/commit/${recentCommit.sha}`,
-                    message
-                });
+                    setRecentCommit({
+                        repoOwner,
+                        repoName,
+                        url: `https://github.com/${repoOwner}/${repoName}/commit/${recentCommit.sha}`,
+                        message
+                    });
+                }
             });
 
         // Fetch the most recently starred repository

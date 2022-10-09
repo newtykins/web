@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Card from '@components/Card';
 import config from '@utils/config';
 import Song from '@contexts/Song';
@@ -13,6 +13,10 @@ const About: NextPage = () => {
     const githubData = useContext(GitHub);
     const osuRank = useContext(Osu);
     const lastPlayedGame = useContext(Steam);
+
+    useEffect(() => {
+        console.log(githubData)
+    })
 
     return (
         <React.Fragment>
@@ -93,7 +97,7 @@ const About: NextPage = () => {
                                 </a>
                                 )
                             </React.Fragment>
-                        ) : (
+                        ) : githubData.recentCommit === null ? 'Unknown ):' : (
                             '...'
                         )}
 
@@ -104,7 +108,7 @@ const About: NextPage = () => {
                             <a href={githubData?.recentCommit?.url} className="hover:underline">
                                 {githubData?.recentCommit?.message}
                             </a>
-                        ) : (
+                        ) : githubData.recentCommit === null ? '' : (
                             '...'
                         )}
                     </span>
