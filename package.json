@@ -15,7 +15,6 @@
         "@fortawesome/free-solid-svg-icons": "^6.1.0",
         "@fortawesome/react-fontawesome": "^0.1.18",
         "@next/bundle-analyzer": "^12.1.0",
-        "animate.css": "^4.1.1",
         "dayjs": "^1.11.0",
         "humanize-duration": "^3.27.1",
         "i18n-iso-countries": "^7.3.0",
@@ -28,7 +27,8 @@
         "react-favicon": "^1.0.0",
         "skinview3d": "^2.2.1",
         "spotify-web-api-node": "^5.0.2",
-        "steamapi": "^2.2.0"
+        "steamapi": "^2.2.0",
+        "typewriter-effect": "^2.19.0"
     },
     "devDependencies": {
         "@types/node": "17.0.21",

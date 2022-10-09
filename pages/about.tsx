@@ -7,6 +7,7 @@ import GitHub from '@contexts/GitHub';
 import Osu from '@contexts/Osu';
 import Steam from '@contexts/Steam';
 import Image from 'next/image';
+import Typewriter from '@components/Typewriter';
 
 const About: NextPage = () => {
     const currentSong = useContext(Song);
@@ -21,14 +22,14 @@ const About: NextPage = () => {
     return (
         <React.Fragment>
             <h1 className="heading text-4xl">
-                Hi, I'm <span className="rainbow">newt!</span>
+                <Typewriter text={'Hey there, I\'m newt!'} />
             </h1>
 
             <br></br>
 
-            <span className="subheading text-xl">I do stuff on the internet sometimes.</span>
+            <span className="subheading text-xl">I am a 16 year old mathematician and computer science student. I do a lot of stuff on the internet.</span>
 
-            <h2 className="heading text-3xl mt-10">
+            <h2 className="heading text-2xl mt-10">
                 Sometimes that stuff is pretty <span className="rainbow">cool</span>
             </h2>
 

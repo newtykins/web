@@ -11,6 +11,7 @@ import {
     IdleAnimation
 } from 'skinview3d';
 import config from '@utils/config';
+import Typewriter from 'typewriter-effect';
 
 const Home: NextPage = () => {
     const currentSong = useContext(Song);
@@ -46,8 +47,10 @@ const Home: NextPage = () => {
             </div>
 
             <div className="mb-24 items-center justify-between">
-                <h1 className="text-3xl heading">
-                    Hi, I'm <span className="rainbow">newt!</span>
+                <h1 className="text-4xl heading">
+                    <Typewriter onInit={typewriter => {
+                        typewriter.typeString('Hi, I\'m newt!').start()
+                    }} />
                 </h1>
                 <h2 className="text-xl mb-0 subheading leading-relaxed">
                     Welcome to my home on the internet. <br />

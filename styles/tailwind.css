@@ -20,7 +20,7 @@
     }
 
     .subheading {
-        @apply text-gray-600 dark:text-nord-4;
+        @apply text-gray-600 dark:text-nord-4 tracking-wide;
     }
 
     .skin {

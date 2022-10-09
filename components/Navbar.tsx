@@ -51,12 +51,13 @@ const Navbar: NextPage = () => {
                 className="md:w-5/12 md:text-right items-center md:justify-end hidden"
                 ref={socialIcons}
             >
-                <SocialIcon icon={faGithub} action="https://github.com/newtykins" aria-label="GitHub" />
+                <SocialIcon icon={faGithub} action="https://github.com/newtykins" aria-label="GitHub" className='mr-6' />
+
                 <SocialIcon
                     icon={faTwitch}
                     action={`https://twitch.tv/${liveStatus?.username}`}
-                    className={liveStatus?.live ? 'text-red-600 twitchAnim' : ''}
-                    tooltip={liveStatus?.live ? 'I am live on Twitch, come and say hi!' : ''}
+                    className={`mr-6 ${liveStatus?.live ? 'text-red-600 ' : ''}
+                    tooltip={liveStatus?.live ? 'I am live on Twitch, come and say hi!' : ''}`}
                     aria-label="Twitch"
                 />
 

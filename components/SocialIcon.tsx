@@ -24,9 +24,8 @@ const Icon: NextPage<IconProps> = ({ icon, calculatedSize, iconClass }) =>
     icon?.prefix ? (
         <FontAwesomeIcon
             icon={icon}
-            className={`text-${calculatedSize === 1 ? '' : calculatedSize}xl ${
-                iconClass ? ` ${iconClass}` : ''
-            }`}
+            className={`text-${calculatedSize === 1 ? '' : calculatedSize}xl ${iconClass ? ` ${iconClass}` : ''
+                }`}
         />
     ) : (
         // @ts-expect-error
@@ -60,7 +59,7 @@ const SocialIcon: NextPage<Props> = ({
     });
 
     return (
-        <span className={`mr-6 hover:cursor-pointer ${className ?? ''}`} title={tooltip}>
+        <span className={`hover:cursor-pointer ${className ?? ''}`} title={tooltip}>
             {typeof action === 'string' ? (
                 action.startsWith('/') ? (
                     <Link href={action}>

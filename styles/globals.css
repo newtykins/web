@@ -12,8 +12,6 @@
     --gradient: linear-gradient(90deg, #11998e 0%, #38ef7d);
 }
 
-/* Animations */
-
 .rainbow {
     background: var(--gradient);
     -webkit-animation: rainbow 5s ease infinite;
@@ -23,21 +21,11 @@
     -webkit-text-fill-color: transparent;
 }
 
-.twitchAnim {
-    animation: tada;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-}
-
-.navbarSlide {
-    animation: slideInUp;
-    animation-duration: 1s;
-}
-
 @keyframes rainbow {
     from {
         filter: hue-rotate(0deg);
     }
+
     to {
         filter: hue-rotate(-360deg);
     }

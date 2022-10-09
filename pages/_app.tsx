@@ -1,7 +1,6 @@
 import '@styles/globals.css';
 import '@styles/tailwind.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import 'animate.css';
 
 import type { AppProps } from 'next/app';
 import type { NextPage } from 'next';
