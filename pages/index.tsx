@@ -19,8 +19,8 @@ const Home: NextPage = () => {
 
     useEffect(() => {
         // Prepare the Minecraft skin renderer
-        const skin: string = `${config.baseUrl}/minecraft/skin.png`;
-        const cape: string = `${config.baseUrl}/minecraft/cape.png`;
+        const skin: string = `${window.location.origin}/minecraft/skin.png`;
+        const cape: string = `${window.location.origin}/minecraft/cape.png`;
 
         const renderer = new SkinRenderer({
             canvas: canvas.current,

@@ -116,7 +116,7 @@ const App: NextPage<AppProps> = ({ Component, pageProps }) => {
             });
 
         // Fetch blog posts
-        fetch(`${config.baseUrl}/api/posts`)
+        fetch(`${window.location.origin}/api/posts`)
             .then(res => res.json())
             .then(res => {
                 setArticles(res);

@@ -1,3 +1,4 @@
+const colors = require('tailwindcss/colors');
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
@@ -27,7 +28,12 @@ module.exports = {
                     13: '#EBCB8B',
                     14: '#A3BE8C',
                     15: '#B48EAD'
-                }
+                },
+                blurple: '#7289da',
+                twitch: colors.violet[500],
+                steam: '#66c0f4',
+                spotify: colors.green[500],
+                github: colors.gray[400]
             }
         }
     }

@@ -53,14 +53,6 @@ const Navbar: NextPage = () => {
             >
                 <SocialIcon icon={faGithub} action="https://github.com/newtykins" aria-label="GitHub" className='mr-6' />
 
-                <SocialIcon
-                    icon={faTwitch}
-                    action={`https://twitch.tv/${liveStatus?.username}`}
-                    className={`mr-6 ${liveStatus?.live ? 'text-red-600 ' : ''}
-                    tooltip={liveStatus?.live ? 'I am live on Twitch, come and say hi!' : ''}`}
-                    aria-label="Twitch"
-                />
-
                 {loaded ? <ThemeToggle /> : <React.Fragment />}
             </div>
         </header>

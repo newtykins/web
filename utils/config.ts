@@ -1,5 +1,4 @@
 export default {
-    baseUrl: process.env.NODE_ENV === 'production' ? 'https://newtt.me' : 'http://localhost:3000',
     credentials: {
         spotify: {
             clientId: process.env.SPOTIFY_CLIENT_ID,

@@ -59,7 +59,7 @@ const SocialIcon: NextPage<Props> = ({
     });
 
     return (
-        <span className={`hover:cursor-pointer ${className ?? ''}`} title={tooltip}>
+        <span className={`hover:cursor-pointer transition-colors ${className ?? ''}`} title={tooltip}>
             {typeof action === 'string' ? (
                 action.startsWith('/') ? (
                     <Link href={action}>
