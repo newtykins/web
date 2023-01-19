@@ -2,9 +2,8 @@
     import { onMount } from 'svelte';
     import { SkinViewer, WalkingAnimation } from 'skinview3d';
     import Typewriter from 'svelte-typewriter';
-    import truncate from 'lodash.truncate';
 
-    import Fa from 'svelte-fa'
+    import Icon from 'svelte-fa'
     import { faMusic } from '@fortawesome/free-solid-svg-icons';
 
     let minecraftCanvas: HTMLCanvasElement;
@@ -17,11 +16,9 @@
 
         if (data.message) {
             song = 'nothing at the moment!';
+            url = '';
         } else {
-            song = truncate(`${data.artists[0].name} - ${data.name}`, {
-                length: 120,
-                omission: '...'
-            });
+            song = `${data.artists[0].name} - ${data.name}`
             url = data.url;
         }
     }
@@ -63,7 +60,7 @@
 <h2 class="leading-relaxed">
     Welcome to my home on the internet. <br />
     
-    <Fa icon={faMusic} class='inline pr-1' size='sm' />
+    <Icon icon={faMusic} class='inline pr-1' size='sm' />
     <Typewriter cursor={false} interval={40} element='span'>
         <a href={url} class="hover:underline">{song}</a>
     </Typewriter>
