@@ -1,21 +1,21 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from '@sveltejs/kit';
 import SpotifyWebApi from 'spotify-web-api-node';
-import { env } from '$env/dynamic/private';
+import { spotify } from '$lib/credentials';
 import humanise from '$lib/humanise';
 
-const spotify = new SpotifyWebApi({
-	clientId: env.SPOTIFY_CLIENT_ID,
-	clientSecret: env.SPOTIFY_CLIENT_SECRET,
-	refreshToken: env.SPOTIFY_REFRESH_TOKEN
+const client = new SpotifyWebApi({
+    clientId: spotify.clientId,
+    clientSecret: spotify.clientSecret,
+    refreshToken: spotify.refreshToken
 });
 
 // Refreshes and updates the client's access token
 const refreshAccessToken = async () => {
-	const { access_token } = (await spotify.refreshAccessToken()).body;
+    const { access_token } = (await client.refreshAccessToken()).body;
 
-	spotify.setAccessToken(access_token);
-}
+    client.setAccessToken(access_token);
+};
 
 // Filters artist data
 const artistFilter = (artist: SpotifyApi.ArtistObjectSimplified) => {
@@ -27,12 +27,14 @@ const artistFilter = (artist: SpotifyApi.ArtistObjectSimplified) => {
 };
 
 export const GET: RequestHandler = async () => {
-	await refreshAccessToken(); // todo: figure out a more effective way to refresh the access token
+    await refreshAccessToken(); // todo: figure out a more effective way to refresh the access token
 
-	const { is_playing: isPlaying, item: track } = (await spotify.getMyCurrentPlayingTrack({ market: 'GB' })).body as { is_playing: boolean, item: SpotifyApi.TrackObjectFull };
+    const { is_playing: isPlaying, item: track } = (
+        await client.getMyCurrentPlayingTrack({ market: 'GB' })
+    ).body as { is_playing: boolean; item: SpotifyApi.TrackObjectFull };
 
-	if (track && isPlaying) {
-		const {
+    if (track && isPlaying) {
+        const {
             name,
             album,
             duration_ms,
@@ -64,9 +66,9 @@ export const GET: RequestHandler = async () => {
             preview,
             url: track.external_urls.spotify
         });
-	}
-	
-	return json({
-		message: 'newt is not currently listening to anything!'
-	});
-}
+    }
+
+    return json({
+        message: 'newt is not currently listening to anything!'
+    });
+};

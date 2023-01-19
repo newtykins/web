@@ -24,12 +24,16 @@
         @apply bg-slate-100;
     }
 
+    img {
+        @apply select-none inline rounded-xl;
+    }
+
     /* Headers */
     h1 {
         @apply text-4xl font-bold font-quicksand leading-5 mb-5;
     }
 
     h2 {
-        @apply text-2xl tracking-wide text-gray-600;
+        @apply text-2xl tracking-wide text-gray-600 leading-relaxed mb-10;
     }
 }

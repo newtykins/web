@@ -1,9 +1,9 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import { SkinViewer, WalkingAnimation } from 'skinview3d';
-    import Typewriter from 'svelte-typewriter';
+    import Typewriter from '$lib/Typewriter.svelte';
 
-    import Icon from 'svelte-fa'
+    import Icon from 'svelte-fa';
     import { faMusic } from '@fortawesome/free-solid-svg-icons';
 
     let minecraftCanvas: HTMLCanvasElement;
@@ -11,17 +11,16 @@
     let url = '';
 
     const updateSong = async () => {
-        const data = await fetch(`${window.location.origin}/api/spotify`)
-            .then(res => res.json());
+        const data = await fetch(`${window.location.origin}/api/spotify`).then(res => res.json());
 
         if (data.message) {
-            song = 'nothing at the moment!';
+            song = 'I am listening to nothing at the moment!';
             url = '';
         } else {
-            song = `${data.artists[0].name} - ${data.name}`
+            song = `${data.artists[0].name} - ${data.name}`;
             url = data.url;
         }
-    }
+    };
 
     onMount(async () => {
         // Skin renderer
@@ -41,8 +40,8 @@
 
         skinViewer.controls.enableZoom = false;
 
+        // Music stuff
         await updateSong();
-
         setInterval(updateSong, 10000);
     });
 </script>
@@ -53,15 +52,16 @@
 
 <canvas class="p-0 m-auto block" bind:this={minecraftCanvas} />
 
-<Typewriter cursor={false} interval={40}>
-    <h1 class="animate__animated animate__bounceIn">Hi, I'm newt!</h1>
+<Typewriter>
+    <h1 class="animate__animated animate__pulse">Hi, I'm newt!</h1>
 </Typewriter>
 
-<h2 class="leading-relaxed">
+<h2>
     Welcome to my home on the internet. <br />
-    
-    <Icon icon={faMusic} class='inline pr-1' size='sm' />
-    <Typewriter cursor={false} interval={40} element='span'>
-        <a href={url} class="hover:underline">{song}</a>
+
+    <Icon icon={faMusic} class="inline pr-1" size="sm" />
+
+    <Typewriter>
+        <a href={url} class={url === '' ? '' : 'hover:underline'}>{song}</a>
     </Typewriter>
 </h2>
