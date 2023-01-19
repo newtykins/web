@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Fonts */
+@font-face {
+	font-family: 'Minecraft';
+	src: url('/minecraft/minecraft.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Quicksand';
+	src: url('/Quicksand-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('/Montserrat-Medium.ttf');
+}
+
+@layer base {
+	/* General styling */
+	html {
+		@apply bg-slate-100;
+	}
+
+	/* Headers */
+	h1 {
+		@apply text-4xl font-bold font-quicksand leading-5 mb-5;
+	}
+
+	h2 {
+		@apply text-2xl tracking-wide text-gray-600;
+	}
+}
