@@ -13,13 +13,21 @@
         "format": "prettier --plugin-search-dir . --write ."
     },
     "dependencies": {
+        "@fortawesome/free-solid-svg-icons": "^6.2.1",
         "animate.css": "^4.1.1",
+        "humanize-duration": "^3.28.0",
+        "lodash.truncate": "^4.4.2",
         "skinview3d": "3.0.0-alpha.1",
+        "spotify-web-api-node": "^5.0.2",
+        "svelte-fa": "^3.0.3",
         "svelte-typewriter": "^3.1.4"
     },
     "devDependencies": {
-        "@sveltejs/adapter-auto": "^1.0.0",
+        "@sveltejs/adapter-vercel": "^1.0.5",
         "@sveltejs/kit": "^1.0.0",
+        "@types/humanize-duration": "^3.27.1",
+        "@types/lodash.truncate": "^4.4.7",
+        "@types/spotify-web-api-node": "^5.0.7",
         "autoprefixer": "^10.4.13",
         "postcss": "^8.4.21",
         "prettier": "^2.8.0",
