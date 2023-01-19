@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from "svelte";
 	import { SkinViewer, WalkingAnimation } from 'skinview3d';
-	import { concurrent } from 'svelte-typewriter';
+	import Typewriter from 'svelte-typewriter';
 
 	let minecraftCanvas: HTMLCanvasElement;
 
@@ -25,7 +25,10 @@
 </script>
 
 <canvas class="p-0 m-auto block w-8" bind:this={minecraftCanvas} />
-<h1 class="animate__animated animate__bounceIn" use:concurrent={{ interval: 40 }}>Hi, I'm newt!</h1>
+
+<Typewriter cursor={false} interval={40}>
+	<h1 class="animate__animated animate__bounceIn">Hi, I'm newt!</h1>
+</Typewriter>
 
 <h2 class="leading-relaxed mb-0">
 	Welcome to my home on the internet. <br/>
