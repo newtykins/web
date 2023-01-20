@@ -45,7 +45,7 @@
 	<h3 class='my-3 hover:underline' >Video {number}/8</h3>
 </a>
 
-<div>
+<div class='space-x-5'>
 	<IconButton icon={faArrowLeft} action={previousVideo} iconSize='1.5x' classes='text-gray-600 hover:text-slate-900' />
 	<IconButton icon={faShuffle} action={randomiseVideo} iconSize='1.5x' classes='text-gray-600 hover:text-slate-900' />
 	<IconButton icon={faArrowRight} action={nextVideo} iconSize='1.5x' classes='text-gray-600 hover:text-slate-900' />

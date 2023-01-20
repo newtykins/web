@@ -7,15 +7,15 @@
 
 <footer class="mt-12 text-2xl text-gray-600 space-x-5">
     <IconLink icon={faHeart} classes="hover:text-red-600" location="/shhh" />
-    <IconLink icon={faGithub} location="https://github.com/newtykins" classes="hover:text-github" />
+    <IconLink icon={faGithub} location={urls.github} classes="hover:text-github" />
     <IconLink
         icon={faCodeBranch}
-        location="https://github.com/newtykins/web"
+        location={urls.repo}
         classes="hover:text-github"
     />
     <IconLink
         icon={faDiscord}
-        location="https://discord.gg/brEhN5Y7YK"
+        location={urls.discord}
         classes="hover:text-blurple"
     />
     <IconLink icon={faSteam} location={urls.steam} classes='hover:text-steam' />
