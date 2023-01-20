@@ -58,6 +58,6 @@
     <Icon icon={faMusic} class="inline pr-1" size="sm" />
 
     <Typewriter>
-        <a href={url} class={url === '' ? '' : 'hover:underline'}>{song}</a>
+        <a href={url}>{song}</a>
     </Typewriter>
 </h2>

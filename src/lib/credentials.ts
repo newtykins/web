@@ -6,8 +6,13 @@ const spotify = {
     refreshToken: env.SPOTIFY_REFRESH_TOKEN
 };
 
-export { spotify };
+const steam = {
+    apiKey: env.STEAM_API_KEY,
+    userId: '76561198163553688'
+}
+
+export { spotify, steam };
 
 export default {
-    spotify
+    spotify, steam
 };

@@ -24,8 +24,16 @@
         @apply bg-slate-100;
     }
 
+    span {
+        @apply whitespace-nowrap;
+    }
+
     img {
         @apply select-none inline rounded-xl;
+    }
+
+    a {
+        @apply hover:underline;
     }
 
     /* Headers */

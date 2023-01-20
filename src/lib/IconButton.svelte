@@ -10,7 +10,7 @@
         location: string = '';
 </script>
 
-<button on:click={() => (location ? goto(location) : action())} class="mx-3">
+<button on:click={() => (location ? goto(location) : action())}>
     {#if classes != ''}
         <span class={classes}>
             <Icon {icon} size={iconSize} class="inline" />

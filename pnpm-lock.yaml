@@ -8,14 +8,18 @@ specifiers:
   '@sveltejs/kit': ^1.0.0
   '@types/humanize-duration': ^3.27.1
   '@types/spotify-web-api-node': ^5.0.7
+  '@types/steamapi': ^2.2.2
   animate.css: ^4.1.1
   autoprefixer: ^10.4.13
+  dayjs: ^1.11.7
   humanize-duration: ^3.28.0
+  i18n-iso-countries: ^7.5.0
   postcss: ^8.4.21
   prettier: ^2.8.0
   prettier-plugin-svelte: ^2.8.1
   skinview3d: 3.0.0-alpha.1
   spotify-web-api-node: ^5.0.2
+  steamapi: ^2.2.0
   svelte: ^3.54.0
   svelte-check: ^3.0.1
   svelte-fa: ^3.0.3
@@ -30,9 +34,12 @@ dependencies:
   '@fortawesome/free-brands-svg-icons': 6.2.1
   '@fortawesome/free-solid-svg-icons': 6.2.1
   animate.css: 4.1.1
+  dayjs: 1.11.7
   humanize-duration: 3.28.0
+  i18n-iso-countries: 7.5.0
   skinview3d: 3.0.0-alpha.1
   spotify-web-api-node: 5.0.2
+  steamapi: 2.2.0
   svelte-fa: 3.0.3
   svelte-typewriter: 3.1.4_svelte@3.55.1
 
@@ -41,6 +48,7 @@ devDependencies:
   '@sveltejs/kit': 1.1.4_svelte@3.55.1+vite@4.0.4
   '@types/humanize-duration': 3.27.1
   '@types/spotify-web-api-node': 5.0.7
+  '@types/steamapi': 2.2.2
   autoprefixer: 10.4.13_postcss@8.4.21
   postcss: 8.4.21
   prettier: 2.8.3
@@ -445,6 +453,10 @@ packages:
       '@types/spotify-api': 0.0.19
     dev: true
 
+  /@types/steamapi/2.2.2:
+    resolution: {integrity: sha512-I64sxNOaTtp8/pFqhgz1niI8sIEgnRLv1xF8juq7nNRiyWiCWMm+bnwD4oo06nhzQH0xZt6pG0RQipmBWMFxPg==}
+    dev: true
+
   /@types/three/0.142.0:
     resolution: {integrity: sha512-YNVnlqthfgqsxKuSNbT/G2r+ha/6x+aJm7kvjT+sxa4jUROw/KOPm5xzGj33sk1+Librg6NwH/wJ6LCDX33UZg==}
     dependencies:
@@ -706,6 +718,10 @@ packages:
     hasBin: true
     dev: true
 
+  /dayjs/1.11.7:
+    resolution: {integrity: sha512-+Yw9U6YO5TQohxLcIkrXBeY73WP3ejHWVvx8XCk3gxvQDCTEmS48ZrSZCKciI7Bhl/uCMyxYtE9UqRILmFphkQ==}
+    dev: false
+
   /debug/4.3.4:
     resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}
     engines: {node: '>=6.0'}
@@ -758,6 +774,10 @@ packages:
   /devalue/4.2.2:
     resolution: {integrity: sha512-Pkwd8qrI9O20VJ14fBNHu+on99toTNZFbgWRpZbC0zbDXpnE2WHYcrC1fHhMsF/3Ee+2yaW7vEujAT7fCYgqrA==}
     dev: true
+
+  /diacritics/1.3.0:
+    resolution: {integrity: sha512-wlwEkqcsaxvPJML+rDh/2iS824jbREk6DUMUKkEaSlxdYHeS43cClJtsWglvw2RfeXGm6ohKDqsXteJ5sP5enA==}
+    dev: false
 
   /didyoumean/1.2.2:
     resolution: {integrity: sha512-gxtyfqMg7GKyhQmb056K7M3xszy/myH8w+B4RT+QXBQsvAOdc3XymqDDPHx1BgPgsdAA5SIifona89YtRATDzw==}
@@ -981,6 +1001,13 @@ packages:
 
   /humanize-duration/3.28.0:
     resolution: {integrity: sha512-jMAxraOOmHuPbffLVDKkEKi/NeG8dMqP8lGRd6Tbf7JgAeG33jjgPWDbXXU7ypCI0o+oNKJFgbSB9FKVdWNI2A==}
+    dev: false
+
+  /i18n-iso-countries/7.5.0:
+    resolution: {integrity: sha512-PtfKJNWLVhhU0KBX/8asmywjAcuyQk07mmmMwxFJcddTNBJJ1yvpY2qxVmyxbtVF+9+6eg9phgpv83XPUKU5CA==}
+    engines: {node: '>= 12'}
+    dependencies:
+      diacritics: 1.3.0
     dev: false
 
   /import-fresh/3.3.0:
@@ -1550,6 +1577,17 @@ packages:
       superagent: 6.1.0
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /steamapi/2.2.0:
+    resolution: {integrity: sha512-2UWklLzYQruuUC0a5AUgll1dU91/CWgiAhm/7y+rqc43kbBWereGTtmwo8wr6imjC64iV5893KChXghW0zK8Gg==}
+    dependencies:
+      steamid: 2.0.0
+    dev: false
+
+  /steamid/2.0.0:
+    resolution: {integrity: sha512-+BFJMbo+IxzyfovLR37E7APkaNfmrL3S+88T7wTMRHnQ6LBhzEawPnjfWNKM9eUL/dH45j+7vhSX4WaGXoa4/Q==}
+    engines: {node: '>=12.0.0'}
     dev: false
 
   /streamsearch/1.1.0:

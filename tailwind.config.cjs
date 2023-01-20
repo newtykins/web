@@ -11,7 +11,8 @@ module.exports = {
             },
             colors: {
                 github: '#6e5494',
-                blurple: '#7289da'
+                blurple: '#7289da',
+                steam: '#2a475e'
             }
         }
     },
