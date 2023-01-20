@@ -46,7 +46,7 @@
     });
 </script>
 
-<canvas class="inline" bind:this={minecraftCanvas} />
+<canvas class="inline w-80 h-96 bg-slate-100" bind:this={minecraftCanvas} />
 
 <Typewriter>
     <h1 class="animate__animated animate__pulse">Hi, I'm newt!</h1>
