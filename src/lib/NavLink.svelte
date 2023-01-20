@@ -9,7 +9,11 @@
 
 <li
     class={`mr-4 pt-1 lg:text-base md:text-2xl text-base${
-        isActive ? ' hover:lg:box-border lg:border-slate-500 lg:border-2 lg:p-1.5' : ' lg:pt-2'
+        isActive
+            ? ' hover:lg:box-border lg:border-slate-500 lg:border-2 lg:p-1.5'
+            : $page.url.pathname === '/shhh'
+            ? ''
+            : ' lg:pt-2'
     }`}
 >
     <button

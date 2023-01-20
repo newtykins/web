@@ -1,5 +1,4 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
-const colors = require('tailwindcss/colors');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -11,7 +10,8 @@ module.exports = {
                 quicksand: ['Quicksand']
             },
             colors: {
-                github: colors.gray[400]
+                github: '#6e5494',
+                blurple: '#7289da'
             }
         }
     },
