@@ -4,12 +4,12 @@
     import { goto } from '$app/navigation';
 
     export let icon: IconProp,
-        iconSize: typeof Icon.prototype.$$prop_def.size = '1x',
+        iconSize: typeof Icon.prototype.$$prop_def.size = '1.25x', // todo: scale this depending on the tailwind viewport
         classes: string = '',
         location: string = '';
 </script>
 
-<button on:click={() => (location ? goto(location) : null)}>
+<button on:click={() => (location ? goto(location) : null)} class='mx-3'>
     {#if classes != ''}
         <span class={classes}>
             <Icon {icon} size={iconSize} class="inline" />

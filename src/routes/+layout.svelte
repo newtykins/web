@@ -10,7 +10,7 @@
     });
 </script>
 
-<div class="max-w-screen-lg mx-auto px-6 py-4 text-center">
+<div class="max-w-screen-lg mx-auto px-10 lg:px-6 py-4 text-center">
     <Nav />
     <slot />
     <Footer />

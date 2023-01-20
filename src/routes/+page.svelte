@@ -14,7 +14,7 @@
         const data = await fetch(`${window.location.origin}/api/spotify`).then(res => res.json());
 
         if (data.message) {
-            song = 'I am listening to nothing at the moment!';
+            song = 'I am not listening to anything at the moment!';
             url = '';
         } else {
             song = `${data.artists[0].name} - ${data.name}`;
@@ -29,7 +29,7 @@
 
         const skinViewer = new SkinViewer({
             canvas: minecraftCanvas,
-            width: 400,
+            width: 300,
             height: 400,
             skin,
             cape,
@@ -42,21 +42,17 @@
 
         // Music stuff
         await updateSong();
-        setInterval(updateSong, 10000);
+        setInterval(updateSong, 5000);
     });
 </script>
 
-<head>
-    <title>newt!</title>
-</head>
-
-<canvas class="p-0 m-auto block" bind:this={minecraftCanvas} />
+<canvas class='inline' bind:this={minecraftCanvas} />
 
 <Typewriter>
     <h1 class="animate__animated animate__pulse">Hi, I'm newt!</h1>
 </Typewriter>
 
-<h2>
+<h2 class='mb-12'>
     Welcome to my home on the internet. <br />
 
     <Icon icon={faMusic} class="inline pr-1" size="sm" />

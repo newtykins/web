@@ -30,10 +30,10 @@
 
     /* Headers */
     h1 {
-        @apply text-4xl font-bold font-quicksand leading-5 mb-5;
+        @apply lg:text-4xl md:text-5xl text-3xl font-bold font-quicksand mb-5;
     }
 
     h2 {
-        @apply text-2xl tracking-wide text-gray-600 leading-relaxed mb-10;
+        @apply md:text-3xl text-xl tracking-wide text-gray-600 leading-loose mb-10;
     }
 }
