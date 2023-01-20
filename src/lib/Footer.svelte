@@ -6,9 +6,5 @@
 
 <footer class="mt-12 text-2xl text-gray-600">
     <IconLink icon={faHeart} classes="hover:text-red-600" location="/shhh" />
-    <IconLink
-        icon={faGithub}
-        location="https://github.com/newtykins"
-        classes="hover:text-github"
-    />
+    <IconLink icon={faGithub} location="https://github.com/newtykins" classes="hover:text-github" />
 </footer>

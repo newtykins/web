@@ -10,12 +10,12 @@
 
 @font-face {
     font-family: 'Quicksand';
-    src: url('/Quicksand-Medium.ttf');
+    src: url('/fonts/Quicksand-Medium.ttf');
 }
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('/Montserrat-Medium.ttf');
+    src: url('/fonts/Montserrat-Medium.ttf');
 }
 
 @layer base {

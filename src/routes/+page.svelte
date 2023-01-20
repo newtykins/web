@@ -46,13 +46,13 @@
     });
 </script>
 
-<canvas class='inline' bind:this={minecraftCanvas} />
+<canvas class="inline" bind:this={minecraftCanvas} />
 
 <Typewriter>
     <h1 class="animate__animated animate__pulse">Hi, I'm newt!</h1>
 </Typewriter>
 
-<h2 class='mb-12'>
+<h2 class="mb-12">
     Welcome to my home on the internet. <br />
 
     <Icon icon={faMusic} class="inline pr-1" size="sm" />
