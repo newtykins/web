@@ -1,6 +1,6 @@
 <script lang="ts">
     import IconButton from '$lib/IconButton.svelte';
-import Typewriter from '$lib/Typewriter.svelte';
+    import Typewriter from '$lib/Typewriter.svelte';
     import { faSteam } from '@fortawesome/free-brands-svg-icons';
     import { onMount } from 'svelte';
     import urls from '$lib/urls';
@@ -12,8 +12,8 @@ import Typewriter from '$lib/Typewriter.svelte';
         await fetch(`${window.location.origin}/api/steam`)
             .then(res => res.json())
             .then(res => {
-                game = res?.mostPlayedRecently?.name || 'unknown';
-                url = res?.mostPlayedRecently?.appID ? `https://store.steampowered.com/app/${res.mostPlayedRecently.appID}` : 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+                game = res?.gameName || 'unknown';
+                url = res?.url || 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
             })
     })
 </script>
