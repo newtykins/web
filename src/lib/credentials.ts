@@ -6,13 +6,12 @@ const spotify = {
     refreshToken: env.SPOTIFY_REFRESH_TOKEN
 };
 
-const wakatime = {
-    apiKey: env.WAKATIME_API_KEY
-};
+const osu = {
+    apiKey: env.OSU_API_KEY 
+}
 
-export { spotify, wakatime };
+export { spotify, osu };
 
 export default {
-    spotify,
-    wakatime
+    spotify, osu
 };
