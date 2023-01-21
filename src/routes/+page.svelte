@@ -47,8 +47,8 @@
         setInterval(updateSong, 5000);
 
         // Try and cache the data on the about page before it is needed
-        (await recentlyStarred).get();
-        (await recentlyPlayed).get();
+        await recentlyStarred;
+        await recentlyPlayed;
     });
 </script>
 

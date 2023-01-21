@@ -12,8 +12,8 @@
     let game: Game;
 
     onMount(async () => {
-        starred = (await recentlyStarred).get();
-        game = (await recentlyPlayed).get();
+        starred = await recentlyStarred;
+        game = await recentlyPlayed;
     });
 </script>
 
