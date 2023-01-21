@@ -2,7 +2,7 @@
     import { fade } from 'svelte/transition';
     import { page } from '$app/stores';
 
-    import '../app.css';
+    import './app.css';
     import 'animate.css';
     import Nav from '$lib/Nav.svelte';
     import Footer from '$lib/Footer.svelte';

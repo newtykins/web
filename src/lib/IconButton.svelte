@@ -13,9 +13,9 @@
 <button on:click={() => (location ? goto(location) : action())}>
     {#if classes != ''}
         <span class={classes}>
-            <Icon icon={icon} size={iconSize} class="inline" />
+            <Icon {icon} size={iconSize} class="inline" />
         </span>
     {:else}
-        <Icon icon={icon} size={iconSize} class="inline" />
+        <Icon {icon} size={iconSize} class="inline" />
     {/if}
 </button>

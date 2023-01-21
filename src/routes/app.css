@@ -29,7 +29,7 @@
     }
 
     img {
-        @apply select-none inline rounded-xl;
+        @apply select-none inline rounded-xl mb-10;
     }
 
     a {

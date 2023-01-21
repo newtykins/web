@@ -9,11 +9,16 @@ export const GET: RequestHandler = async () => {
         .then(res => {
             let $ = load(res);
 
-            let mostRecentGame = $('div.recent_games').find('div.recent_game').first().find('div.game_info').first().find('div.game_name');
+            let mostRecentGame = $('div.recent_games')
+                .find('div.recent_game')
+                .first()
+                .find('div.game_info')
+                .first()
+                .find('div.game_name');
 
             return json({
                 gameName: mostRecentGame.text(),
                 url: mostRecentGame.children().first().attr('href')
-            })
-        })
+            });
+        });
 };

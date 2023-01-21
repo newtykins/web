@@ -1,22 +1,15 @@
 <script>
     import IconLink from './IconButton.svelte';
     import { faCodeBranch, faHeart } from '@fortawesome/free-solid-svg-icons';
-    import { faDiscord, faGithub, faSteam } from '@fortawesome/free-brands-svg-icons';
+    import { faDiscord, faGithub, faSteam, faYoutube } from '@fortawesome/free-brands-svg-icons';
     import urls from './urls';
 </script>
 
 <footer class="mt-12 text-2xl text-gray-600 space-x-5">
     <IconLink icon={faHeart} classes="hover:text-red-600" location="/shhh" />
     <IconLink icon={faGithub} location={urls.github} classes="hover:text-github" />
-    <IconLink
-        icon={faCodeBranch}
-        location={urls.repo}
-        classes="hover:text-github"
-    />
-    <IconLink
-        icon={faDiscord}
-        location={urls.discord}
-        classes="hover:text-blurple"
-    />
-    <IconLink icon={faSteam} location={urls.steam} classes='hover:text-steam' />
+    <IconLink icon={faCodeBranch} location={urls.repo} classes="hover:text-github" />
+    <IconLink icon={faYoutube} location={urls.youtube} classes="hover:text-youtube" />
+    <IconLink icon={faDiscord} location={urls.discord} classes="hover:text-blurple" />
+    <IconLink icon={faSteam} location={urls.steam} classes="hover:text-steam" />
 </footer>
