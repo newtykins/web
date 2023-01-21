@@ -27,7 +27,7 @@
                     starred.set({
                         displayName: recentStar?.['full_name'],
                         url: `https://github.com/${recentStar?.['full_name']}`,
-                        expires: new Date().getTime() + 10000
+                        expires: new Date().getTime() + 3600000
                     });
 
                     repository = get(starred);
@@ -42,7 +42,7 @@
                     recentlyPlayed.set({
                         displayName: res?.gameName ?? 'unknown',
                         url: res?.url ?? 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-                        expires: Date.now() + 10000
+                        expires: Date.now() + 3600000
                     })
 
                     game = get(recentlyPlayed);

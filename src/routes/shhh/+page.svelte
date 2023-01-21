@@ -42,7 +42,7 @@
 <h2>Now enjoy this video, you deserve it (:</h2>
 
 <a href={`${origin}/shhh/${number}.mp4`} download>
-    <h3 class="my-3 hover:underline">Video {number}/8</h3>
+    <h3 class="my-3 hover:underline">Video {number}/{videoCount}</h3>
 </a>
 
 <div class="space-x-5">
