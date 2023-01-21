@@ -7,7 +7,7 @@
     import { faMusic } from '@fortawesome/free-solid-svg-icons';
 
     let minecraftCanvas: HTMLCanvasElement;
-    $: song = '';
+    $: song = '...';
     let url = '';
 
     const updateSong = async () => {
@@ -56,8 +56,5 @@
     Welcome to my home on the internet. <br />
 
     <Icon icon={faMusic} class="inline pr-1" size="sm" />
-
-    <Typewriter>
-        <a href={url}>{song}</a>
-    </Typewriter>
+    <a href={url}>{song}</a>
 </h2>

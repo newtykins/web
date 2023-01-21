@@ -7,11 +7,12 @@ const spotify = {
 };
 
 const osu = {
-    apiKey: env.OSU_API_KEY 
-}
+    apiKey: env.OSU_API_KEY
+};
 
 export { spotify, osu };
 
 export default {
-    spotify, osu
+    spotify,
+    osu
 };

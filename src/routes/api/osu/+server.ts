@@ -87,7 +87,7 @@ const getUser = async (type: OsuQueryType, q: string) => {
 export const GET: RequestHandler = async ({ url }) => {
     // Take either potential parameter
     const id = url.searchParams.get('id');
-	const username = url.searchParams.get('username');
+    const username = url.searchParams.get('username');
 
     // Determine the input type, and search for the user
     var inputType: OsuQueryType = 'id';

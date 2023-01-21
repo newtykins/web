@@ -43,7 +43,7 @@
                         displayName: res?.gameName ?? 'unknown',
                         url: res?.url ?? 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
                         expires: Date.now() + 3600000
-                    })
+                    });
 
                     game = get(recentlyPlayed);
                 });
