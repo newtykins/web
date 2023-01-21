@@ -47,18 +47,21 @@
 
 <div class="space-x-5">
     <IconButton
+        label="Previous Video"
         icon={faArrowLeft}
         action={previousVideo}
         iconSize="1.5x"
         classes="text-gray-600 hover:text-slate-900"
     />
     <IconButton
+        label="Random Video"
         icon={faShuffle}
         action={randomiseVideo}
         iconSize="1.5x"
         classes="text-gray-600 hover:text-slate-900"
     />
     <IconButton
+        label="Next Video"
         icon={faArrowRight}
         action={nextVideo}
         iconSize="1.5x"
@@ -67,6 +70,16 @@
 </div>
 
 <div class="flex justify-center mt-5">
-    <!-- svelte-ignore a11y-media-has-caption -->
-    <video src={`${origin}/shhh/${number}.mp4`} width={500} height={500} autoplay loop controls />
+    {#if number != 0}
+        <!-- svelte-ignore a11y-media-has-caption -->
+        <video
+            src={`${origin}/shhh/${number}.mp4`}
+            width={500}
+            height={500}
+            autoplay
+            loop
+            controls
+            preload="none"
+        />
+    {/if}
 </div>

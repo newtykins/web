@@ -8,7 +8,7 @@
 
     let minecraftCanvas: HTMLCanvasElement;
     $: song = '...';
-    let url = '';
+    let url = '/';
 
     const updateSong = async () => {
         const data = await fetch(`${window.location.origin}/api/spotify`).then(res => res.json());

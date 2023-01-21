@@ -62,6 +62,7 @@
 
     <h2>
         I spend a lot of my spare time coding, and I put most of it on <IconButton
+            label="GitHub"
             icon={faGithub}
             location={urls.github}
             classes="hover:text-github"
@@ -74,7 +75,12 @@
         {:else}
             ...
         {/if}
-        <IconButton icon={faStar} location={repository?.url} classes="hover:text-yellow-400" />
+        <IconButton
+            label="Star"
+            icon={faStar}
+            location={repository?.url}
+            classes="hover:text-yellow-400"
+        />
     </h2>
 
     <h2>
@@ -84,6 +90,11 @@
             <Typewriter mode="cascade"><a href={game.url}>{game.displayName}</a>!</Typewriter>
         {:else}
             ...
-        {/if} on <IconButton icon={faSteam} location={urls.steam} classes="hover:text-steam" />
+        {/if} on <IconButton
+            label="Steam"
+            icon={faSteam}
+            location={urls.steam}
+            classes="hover:text-steam"
+        />
     </h2>
 </div>
