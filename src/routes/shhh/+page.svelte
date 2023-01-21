@@ -1,7 +1,7 @@
 <script lang="ts">
-    import Typewriter from '$lib/Typewriter.svelte';
+    import Typewriter from '$lib/components/Typewriter.svelte';
     import { onMount } from 'svelte';
-    import IconButton from '$lib/IconButton.svelte';
+    import IconButton from '$lib/components/IconButton.svelte';
     import { faArrowLeft, faArrowRight, faShuffle } from '@fortawesome/free-solid-svg-icons';
 
     const videoCount = 18;

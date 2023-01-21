@@ -1,5 +1,4 @@
-import { json } from '@sveltejs/kit';
-import type { RequestHandler } from '@sveltejs/kit';
+import { json, type RequestHandler } from '@sveltejs/kit';
 import urls from '$lib/urls';
 import { load } from 'cheerio';
 

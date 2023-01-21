@@ -1,10 +1,12 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import { SkinViewer, WalkingAnimation } from 'skinview3d';
-    import Typewriter from '$lib/Typewriter.svelte';
+    import Typewriter from '$lib/components/Typewriter.svelte';
 
     import Icon from 'svelte-fa';
     import { faMusic } from '@fortawesome/free-solid-svg-icons';
+    import { recentlyStarred } from '$lib/stores/recentlyStarred';
+    import { recentlyPlayed } from '$lib/stores/recentlyPlayed';
 
     let minecraftCanvas: HTMLCanvasElement;
     $: song = '...';
@@ -43,6 +45,10 @@
         // Music stuff
         await updateSong();
         setInterval(updateSong, 5000);
+
+        // Try and cache the data on the about page before it is needed
+        (await recentlyStarred).get();
+        (await recentlyPlayed).get();
     });
 </script>
 

@@ -1,16 +1,21 @@
-import { browser } from '$app/environment';
-import { writable } from 'svelte/store';
+import cache from '$lib/cache';
+import urls from '$lib/urls';
 
-interface Game {
+export interface Game {
     displayName: string;
     url: string;
-    expires: number;
 }
 
-export const recentlyPlayed = writable<Game | null>(
-    browser ? JSON.parse(localStorage.getItem('recentlyPlayed') as string) ?? null : null
+export const recentlyPlayed = cache<Game>(
+    'recentlyPlayed',
+    36000,
+    async () =>
+        await fetch(`${urls.domain}/api/steam`)
+            .then(res => res.json())
+            .then(res => {
+                return {
+                    displayName: res?.gameName,
+                    url: res?.url
+                };
+            })
 );
-
-recentlyPlayed.subscribe(value => {
-    if (browser) localStorage.recentlyPlayed = JSON.stringify(value);
-});

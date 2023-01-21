@@ -4,8 +4,8 @@
 
     import './app.css';
     import 'animate.css';
-    import Nav from '$lib/Nav.svelte';
-    import Footer from '$lib/Footer.svelte';
+    import Nav from '$lib/components/Nav.svelte';
+    import Footer from '$lib/components/Footer.svelte';
 </script>
 
 <div class="max-w-screen-lg mx-auto px-10 lg:px-6 py-4 text-center">

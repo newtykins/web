@@ -1,9 +1,8 @@
 import countries from 'i18n-iso-countries';
-import humanise from '$lib/humanise';
-import formatDate from '$lib/formatDate';
+import humanise from '$lib/utils/humanise';
+import formatDate from '$lib/utils/formatDate';
 import { osu } from '$lib/credentials';
-import type { RequestHandler } from '@sveltejs/kit';
-import { json } from '@sveltejs/kit';
+import { json, type RequestHandler } from '@sveltejs/kit';
 
 type OsuQueryType = 'id' | 'username';
 

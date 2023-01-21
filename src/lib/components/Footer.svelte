@@ -2,7 +2,7 @@
     import IconLink from './IconButton.svelte';
     import { faCodeBranch, faHeart } from '@fortawesome/free-solid-svg-icons';
     import { faDiscord, faGithub, faSteam, faYoutube } from '@fortawesome/free-brands-svg-icons';
-    import urls from './urls';
+    import urls from '../urls';
 </script>
 
 <footer class="mt-12 text-2xl text-gray-600 md:space-x-5 space-x-3">

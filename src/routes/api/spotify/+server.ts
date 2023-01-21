@@ -1,8 +1,7 @@
-import { json } from '@sveltejs/kit';
-import type { RequestHandler } from '@sveltejs/kit';
+import { json, type RequestHandler } from '@sveltejs/kit';
 import SpotifyWebApi from 'spotify-web-api-node';
 import { spotify } from '$lib/credentials';
-import humanise from '$lib/humanise';
+import humanise from '$lib/utils/humanise';
 
 const client = new SpotifyWebApi({
     clientId: spotify.clientId,
