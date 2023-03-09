@@ -41,7 +41,7 @@
 
     /* Headers */
     h1 {
-        @apply lg:text-4xl md:text-5xl text-3xl font-bold font-quicksand mb-5;
+        @apply lg:text-4xl md:text-5xl text-3xl font-bold font-quicksand;
     }
 
     h2 {

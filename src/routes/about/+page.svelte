@@ -20,7 +20,7 @@
 <img src="/img/patches.png" width={250} alt="Patches says hello!" />
 
 <Typewriter>
-    <h1 class="animate__animated animate__bounceIn tracking-wider">Hey there, I'm newt!</h1>
+    <h1 class="animate__animated animate__bounceIn tracking-wider mb-5">Hey there, I'm newt!</h1>
 </Typewriter>
 
 <div class="space-y-5">
