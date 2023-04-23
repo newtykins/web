@@ -41,11 +41,11 @@
 
     /* Headers */
     h1 {
-        @apply lg:text-4xl md:text-5xl text-3xl font-bold font-quicksand;
+        @apply lg:text-4xl md:text-4xl text-3xl font-bold font-quicksand;
     }
 
     h2 {
-        @apply lg:text-2xl md:text-3xl text-xl tracking-wide text-gray-600 leading-loose;
+        @apply lg:text-2xl md:text-2xl text-xl tracking-wide text-gray-600 leading-loose;
     }
 
     h3 {

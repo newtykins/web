@@ -64,7 +64,7 @@
 </Typewriter>
 
 <h2 class="mb-4 mt-2 text-gray-700 font-quicksand">
-    <Icon icon={faClock} class="inline pr-1" size="sm" /> {date.format("h:mm a")} UTC{date.utcOffset() != 0 ? `+${date.utcOffset()}` : ''} <br/>
+    <Icon icon={faClock} class="inline pr-1" size="sm" /> {date.format("h:mm a")} UTC{date.utcOffset() != 0 ? `+${date.utcOffset() / 60}` : ''} <br/>
     
     <Icon icon={faMusic} class="inline pr-1" size="sm" /> <a href={url}>{song}</a>
 </h2>
