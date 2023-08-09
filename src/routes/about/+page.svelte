@@ -24,7 +24,7 @@
 </Typewriter>
 
 <div class="space-y-5">
-    <h2>I am a 16 year old mathematician and computer scientist.</h2>
+    <h2>I am a 17 year old mathematician and computer scientist.</h2>
 
     <h2>
         I spend a lot of my spare time coding, and I put most of it on <IconButton
